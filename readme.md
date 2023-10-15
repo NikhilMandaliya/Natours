@@ -52,7 +52,7 @@
 * Search for tours that you want to book
 * Book a tour
 * Proceed to the payment checkout page
-* Enter the card details (Test Mood):
+* Enter the card details (Test Mode):
   ```
   - Card No. : 4242 4242 4242 4242
   - Expiry date: 02 / 22
@@ -92,51 +92,58 @@
 
 If you wish to play around with the code base in your local environment, do the following
 
-```
 * Clone this repo to your local machine.
 * Using the terminal, navigate to the cloned repo.
 * Install all the necessary dependencies, as stipulated in the package.json file.
 * If you don't already have one, set up accounts with: MONGODB, MAPBOX, STRIPE, SENDGRID, and MAILTRAP. Please ensure to have at least basic knowledge of how these services work.
 * In your .env file, set environment variables for the following:
-    * DATABASE=your Mongodb database URL
-    * DATABASE_PASSWORD=your MongoDB password
+  ```
+  DATABASE=your Mongodb database URL
+  DATABASE_PASSWORD=your MongoDB password
 
-    * SECRET=your JSON web token secret
-    * JWT_EXPIRES_IN=90d
-    * JWT_COOKIE_EXPIRES_IN=90
+  SECRET=your JSON web token secret
+  JWT_EXPIRES_IN=90d
+  JWT_COOKIE_EXPIRES_IN=90
 
-    * EMAIL_USERNAME=your mailtrap username
-    * EMAIL_PASSWORD=your mailtrap password
-    * EMAIL_HOST=smtp.mailtrap.io
-    * EMAIL_PORT=2525
-    * EMAIL_FROM=your real-life email address
+  EMAIL_USERNAME=your mailtrap username
+  EMAIL_PASSWORD=your mailtrap password
+  EMAIL_HOST=smtp.mailtrap.io
+  EMAIL_PORT=2525
+  EMAIL_FROM=your real-life email address
 
-    * SENDGRID_USERNAME=apikey
-    * SENDGRID_PASSWORD=your sendgrid password
+  SENDGRID_USERNAME=apikey
+  SENDGRID_PASSWORD=your sendgrid password
 
-    * STRIPE_SECRET_KEY=your stripe secret key
-    * STRIPE_WEBHOOK_SECRET=your stripe webhook secret
-
+  STRIPE_SECRET_KEY=your stripe secret key
+  STRIPE_WEBHOOK_SECRET=your stripe webhook secret
+  ```
 * Start the server.
 * Your app should be running just fine.
-```
+
 
 ## Installation
 You can fork the app or you can git-clone the app into your local machine. Once done, please install all the
-dependencies by running
+dependencies and Set your env variables
 ```
-$ npm i
-Set your env variables
+git clone https://github.com/NikhilMandaliya/Organive.git
+npm i
+```
+
+Here are parcel scripts for dev and build
+```
 $ npm run watch:js
 $ npm run build:js
-$ npm run dev (for development)
-$ npm run start:prod (for production)
-$ npm run debug (for debug)
-$ npm start
-Setting up ESLint and Prettier in VS Code 👇🏻
-$ npm i eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb eslint-plugin-node
-eslint-plugin-import eslint-plugin-jsx-a11y  eslint-plugin-react --save-dev
 ```
+
+You can run for development (nodemon)
+```
+$ npm run dev
+```
+You can run in production mode
+```
+$ npm run start:prod (for production)
+```
+
 
 ## Acknowledgement
 
